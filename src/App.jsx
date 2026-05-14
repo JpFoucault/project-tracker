@@ -37,6 +37,11 @@ function App() {
     setProjets(projets.filter(projet => projet.id !== id))
   }
 
+  function modifyProject(id, updatedProject) {
+    setProjets(projets.map(projet => projet.id === id ? { ...projet, ...updatedProject } : projet))
+  }
+
+
   return (
     <div style={{ backgroundColor: '#f8fafc', minHeight: '100vh' }}>
       <Header />
@@ -73,6 +78,7 @@ function App() {
               budgetEstime={projet.budgetEstime}
               budgetReel={projet.budgetReel}
               onSupprimer={() => supprimerProjet(projet.id)}
+              onModifier={modifyProject}
             />
           ))
         )}

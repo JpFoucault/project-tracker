@@ -47,6 +47,20 @@ function CarteProjet(props) {
           >
             Supprimer
           </button>
+          <button
+            onClick={props.onModifier}
+            style={{
+              backgroundColor: 'transparent',
+              border: '1px solid #0427ebff',
+              borderRadius: '6px',
+              padding: '3px 10px',
+              color: '#3586d6ff',
+              cursor: 'pointer',
+              fontSize: '0.8rem'
+            }}
+          >
+            Modifier
+          </button>
         </div>
       </div>
 

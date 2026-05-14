@@ -21,7 +21,7 @@ Permet de visualiser en temps réel l'écart entre budget estimé et budget rée
 ## Installation
 
 \`\`\`bash
-git clone https://github.com/TON_USERNAME/project-tracker-mbda.git
+git clone https://github.com/JpFoucault/project-tracker
 cd project-tracker-mbda
 npm install
 npm run dev
