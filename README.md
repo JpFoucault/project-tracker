@@ -1,16 +1,49 @@
-# React + Vite
+# Project Tracker — Tableau de bord de chiffrage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web de suivi budgétaire de projets, développée en React.js.
+Permet de visualiser en temps réel l'écart entre budget estimé et budget réel par projet.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Ajout et suppression de projets
+- Calcul automatique des KPIs (budget total, écart global, projets dépassés)
+- Visualisation graphique estimé vs réel (Recharts)
+- Badge de statut et barre de progression par projet
+- Persistance des données via localStorage
 
-## React Compiler
+## Technologies utilisées
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js 18 (hooks : useState, useEffect)
+- Recharts (graphiques)
+- Vite (bundler)
+- JavaScript ES6+
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+\`\`\`bash
+git clone https://github.com/TON_USERNAME/project-tracker-mbda.git
+cd project-tracker-mbda
+npm install
+npm run dev
+\`\`\`
+
+## Architecture
+
+\`\`\`
+src/
+├── components/
+│   ├── Header.jsx          # Barre de navigation
+│   ├── KPIs.jsx            # Cartes de synthèse calculées
+│   ├── Graphiques.jsx      # Graphique Recharts estimé vs réel
+│   ├── FormulaireProjet.jsx # Formulaire d'ajout
+│   └── CarteProjet.jsx     # Carte individuelle avec barre de progression
+└── App.jsx                 # Composant racine — gestion de l'état global
+\`\`\`
+
+## Concepts React appliqués
+
+- **Composants fonctionnels** et séparation des responsabilités
+- **useState** pour la gestion de l'état global
+- **useEffect** pour la persistance automatique
+- **Props** et lifting state up pour la communication entre composants
+- **Array.map / filter / reduce** pour la manipulation des données
